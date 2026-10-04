@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up | NovaTech</title>
+
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <a href="../../index.html"
+         class="text-2xl font-bold text-indigo-600">
+        NovaTech
+      </a>
+
+      <div class="hidden md:flex gap-6 items-center">
+
+        <a href="../../index.html" class="hover:text-indigo-600">
+          Home
+        </a>
+
+        <a href="about.html" class="hover:text-indigo-600">
+          About
+        </a>
+
+        <a href="contact.html" class="hover:text-indigo-600">
+          Contact
+        </a>
+
+        <a href="signin.html" class="hover:text-indigo-600">
+          Sign In
+        </a>
+
+        <a href="signup.html"
+           class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+          Sign Up
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- SIGN UP SECTION -->
+  <section class="min-h-[75vh] flex items-center justify-center px-6 py-16">
+
+    <div class="w-full max-w-md">
+
+      <!-- ICON -->
+      <div class="text-center mb-6">
+
+        <div class="mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-3xl">
+          👤
+        </div>
+
+      </div>
+
+
+      <!-- HEADING -->
+      <div class="text-center mb-8">
+
+        <p class="text-indigo-600 font-semibold">
+          JOIN NOVATECH
+        </p>
+
+        <h1 class="text-3xl font-bold mt-2">
+          Create Your Account
+        </h1>
+
+        <p class="text-gray-500 mt-3">
+          Fill in the information below to get started.
+        </p>
+
+      </div>
+
+
+      <!-- FORM CARD -->
+      <div class="bg-white shadow-lg rounded-2xl p-8">
+
+        <form class="space-y-5">
+
+          <!-- FULL NAME -->
+          <div>
+
+            <label class="block font-medium mb-2">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your full name"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+          </div>
+
+
+          <!-- EMAIL -->
+          <div>
+
+            <label class="block font-medium mb-2">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+          </div>
+
+
+          <!-- PASSWORD -->
+          <div>
+
+            <label class="block font-medium mb-2">
+              Password
+            </label>
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Create a password"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+          </div>
+
+
+          <!-- CONFIRM PASSWORD -->
+          <div>
+
+            <label class="block font-medium mb-2">
+              Confirm Password
+            </label>
+
+            <input
+              type="password"
+              name="confirm_password"
+              placeholder="Confirm your password"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+          </div>
+
+
+          <!-- TERMS -->
+          <div class="flex items-start gap-2">
+
+            <input
+              type="checkbox"
+              required
+              class="w-4 h-4 mt-1">
+
+            <label class="text-sm text-gray-600">
+              I agree to the terms and conditions.
+            </label>
+
+          </div>
+
+
+          <!-- SIGN UP BUTTON -->
+          <button
+            type="submit"
+            class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+
+            Create Account
+
+          </button>
+
+        </form>
+
+
+        <!-- DIVIDER -->
+        <div class="flex items-center gap-4 my-6">
+
+          <div class="h-px bg-gray-200 flex-1"></div>
+
+          <span class="text-sm text-gray-400">
+            OR
+          </span>
+
+          <div class="h-px bg-gray-200 flex-1"></div>
+
+        </div>
+
+
+        <!-- GOOGLE BUTTON -->
+        <button
+          class="w-full border border-gray-300 py-3 rounded-lg font-medium hover:bg-gray-50">
+
+          Continue with Google
+
+        </button>
+
+
+        <!-- SIGN IN LINK -->
+        <p class="text-center text-sm text-gray-600 mt-6">
+
+          Already have an account?
+
+          <a href="signin.html"
+             class="text-indigo-600 font-semibold hover:underline">
+            Sign In
+          </a>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-10 text-center">
+
+      <h3 class="text-xl font-bold text-indigo-400">
+        NovaTech
+      </h3>
+
+      <p class="text-gray-400 mt-2">
+        Modern digital solutions for a better future.
+      </p>
+
+      <p class="text-gray-500 text-sm mt-5">
+        © 2026 NovaTech. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
