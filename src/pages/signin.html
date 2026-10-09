@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,216 +8,183 @@
   <title>Sign In | NovaTech</title>
 
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- NAVBAR -->
-  <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <!-- HEADER AND NAVIGATION -->
+  <header>
+    <nav class="bg-white shadow-md" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      <a href="../../index.html"
-         class="text-2xl font-bold text-indigo-600">
-        NovaTech
-      </a>
-
-      <div class="hidden md:flex gap-6 items-center">
-
-        <a href="../../index.html" class="hover:text-indigo-600">
-          Home
+        <a href="../../index.html"
+           class="text-2xl font-bold text-indigo-600">
+          NovaTech
         </a>
 
-        <a href="about.html" class="hover:text-indigo-600">
-          About
-        </a>
-
-        <a href="contact.html" class="hover:text-indigo-600">
-          Contact
-        </a>
-
-        <a href="signin.html"
-           class="text-indigo-600 font-semibold">
-          Sign In
-        </a>
-
-        <a href="signup.html"
-           class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
-          Sign Up
-        </a>
-
-      </div>
-
-    </div>
-  </nav>
-
-
-  <!-- SIGN IN SECTION -->
-  <section class="min-h-[75vh] flex items-center justify-center px-6 py-16">
-
-    <div class="w-full max-w-md">
-
-      <!-- ICON -->
-      <div class="text-center mb-6">
-        <div class="mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-3xl">
-          🔐
+        <div class="hidden md:flex gap-6 items-center">
+          <a href="../../index.html" class="hover:text-indigo-600">Home</a>
+          <a href="about.html" class="hover:text-indigo-600">About</a>
+          <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+          <a href="signin.html" class="text-indigo-600 font-semibold">Sign In</a>
+          <a href="signup.html"
+             class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+            Sign Up
+          </a>
         </div>
-      </div>
-
-
-      <!-- HEADING -->
-      <div class="text-center mb-8">
-
-        <p class="text-indigo-600 font-semibold">
-          WELCOME BACK
-        </p>
-
-        <h1 class="text-3xl font-bold mt-2">
-          Sign In To Your Account
-        </h1>
-
-        <p class="text-gray-500 mt-3">
-          Enter your details to continue.
-        </p>
 
       </div>
+    </nav>
+  </header>
 
+  <!-- MAIN CONTENT -->
+  <main>
 
-      <!-- FORM CARD -->
-      <div class="bg-white shadow-lg rounded-2xl p-8">
+    <!-- SIGN IN SECTION -->
+    <section class="min-h-[75vh] flex items-center justify-center px-6 py-16"
+             aria-labelledby="signin-heading">
 
-        <form class="space-y-5">
+      <div class="w-full max-w-md">
 
-          <!-- EMAIL -->
-          <div>
-
-            <label class="block font-medium mb-2">
-              Email Address
-            </label>
-
-            <input
-              type="email"
-              placeholder="Enter your email"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-
+        <!-- ICON -->
+        <div class="text-center mb-6">
+          <div class="mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center text-3xl"
+               aria-hidden="true">
+            🔐
           </div>
+        </div>
 
+        <!-- INTRODUCTION -->
+        <header class="text-center mb-8">
+          <p class="text-indigo-600 font-semibold">WELCOME BACK</p>
 
-          <!-- PASSWORD -->
-          <div>
+          <h1 id="signin-heading" class="text-3xl font-bold mt-2">
+            Sign In To Your Account
+          </h1>
 
-            <div class="flex justify-between items-center mb-2">
+          <p class="text-gray-500 mt-3">
+            Enter your details to continue.
+          </p>
+        </header>
 
-              <label class="font-medium">
-                Password
+        <!-- FORM CARD -->
+        <section class="bg-white shadow-lg rounded-2xl p-8"
+                 aria-label="Sign in form">
+
+          <form action="#" method="get" class="space-y-5">
+
+            <!-- EMAIL -->
+            <div>
+              <label for="signin-email" class="block font-medium mb-2">
+                Email Address
               </label>
 
-              <a href="#"
-                 class="text-sm text-indigo-600 hover:underline">
-                Forgot Password?
-              </a>
-
+              <input id="signin-email"
+                     type="email"
+                     name="email"
+                     placeholder="Enter your email"
+                     autocomplete="email"
+                     required
+                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
             </div>
 
-            <input
-              type="password"
-              placeholder="Enter your password"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <!-- PASSWORD -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="signin-password" class="font-medium">
+                  Password
+                </label>
 
+                <a href="#"
+                   class="text-sm text-indigo-600 hover:underline">
+                  Forgot Password?
+                </a>
+              </div>
+
+              <input id="signin-password"
+                     type="password"
+                     name="password"
+                     placeholder="Enter your password"
+                     autocomplete="current-password"
+                     required
+                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <!-- REMEMBER ME -->
+            <div class="flex items-center gap-2">
+              <input id="remember-me"
+                     type="checkbox"
+                     name="remember"
+                     class="w-4 h-4">
+
+              <label for="remember-me" class="text-sm text-gray-600">
+                Remember me
+              </label>
+            </div>
+
+            <!-- SIGN IN BUTTON -->
+            <button type="submit"
+                    class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+              Sign In
+            </button>
+
+          </form>
+
+          <!-- DIVIDER -->
+          <div class="flex items-center gap-4 my-6" aria-hidden="true">
+            <div class="h-px bg-gray-200 flex-1"></div>
+            <span class="text-sm text-gray-400">OR</span>
+            <div class="h-px bg-gray-200 flex-1"></div>
           </div>
 
-
-          <!-- REMEMBER ME -->
-          <div class="flex items-center gap-2">
-
-            <input
-              type="checkbox"
-              class="w-4 h-4">
-
-            <label class="text-sm text-gray-600">
-              Remember me
-            </label>
-
-          </div>
-
-
-          <!-- SIGN IN BUTTON -->
-          <button
-            type="submit"
-            class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
-
-            Sign In
-
+          <!-- SOCIAL BUTTON -->
+          <button type="button"
+                  class="w-full border border-gray-300 py-3 rounded-lg font-medium hover:bg-gray-50">
+            Continue with Google
           </button>
 
-        </form>
+          <!-- SIGN UP LINK -->
+          <p class="text-center text-sm text-gray-600 mt-6">
+            Don't have an account?
+            <a href="signup.html"
+               class="text-indigo-600 font-semibold hover:underline">
+              Create Account
+            </a>
+          </p>
 
-
-        <!-- DIVIDER -->
-        <div class="flex items-center gap-4 my-6">
-
-          <div class="h-px bg-gray-200 flex-1"></div>
-
-          <span class="text-sm text-gray-400">
-            OR
-          </span>
-
-          <div class="h-px bg-gray-200 flex-1"></div>
-
-        </div>
-
-
-        <!-- SOCIAL BUTTON -->
-        <button
-          class="w-full border border-gray-300 py-3 rounded-lg font-medium hover:bg-gray-50">
-
-          Continue with Google
-
-        </button>
-
-
-        <!-- SIGN UP LINK -->
-        <p class="text-center text-sm text-gray-600 mt-6">
-
-          Don't have an account?
-
-          <a href="signup.html"
-             class="text-indigo-600 font-semibold hover:underline">
-            Create Account
-          </a>
-
-        </p>
+        </section>
 
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
+  </main>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white">
-
     <div class="max-w-7xl mx-auto px-6 py-10 text-center">
 
-      <h3 class="text-xl font-bold text-indigo-400">
-        NovaTech
-      </h3>
+      <h2 class="text-xl font-bold text-indigo-400">NovaTech</h2>
 
       <p class="text-gray-400 mt-2">
         Modern digital solutions for a better future.
       </p>
+
+      <nav aria-label="Footer navigation"
+           class="flex justify-center flex-wrap gap-4 mt-5 text-gray-400">
+        <a href="../../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
 
       <p class="text-gray-500 text-sm mt-5">
         © 2026 NovaTech. All rights reserved.
       </p>
 
     </div>
-
   </footer>
 
 </body>
 </html>
+```

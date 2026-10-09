@@ -1,361 +1,234 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Mobile responsive setting -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Page title -->
   <title>Home | NovaTech</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4">
+  <!-- HEADER AND NAVBAR -->
+  <header>
+    <nav class="bg-white shadow-md" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-6 py-4">
 
-      <!-- Top Navbar -->
-      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between">
 
-        <!-- Logo -->
-        <a href="index.html" class="text-2xl font-bold text-indigo-600">
-          NovaTech
-        </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center gap-6">
-
-          <a href="index.html"
-             class="text-indigo-600 font-semibold">
-            Home
+          <a href="index.html" class="text-2xl font-bold text-indigo-600">
+            NovaTech
           </a>
 
-          <a href="src/pages/about.html"
-             class="hover:text-indigo-600">
-            About
-          </a>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="index.html" class="text-indigo-600 font-semibold" aria-current="page">Home</a>
+            <a href="src/pages/about.html" class="hover:text-indigo-600">About</a>
+            <a href="src/pages/contact.html" class="hover:text-indigo-600">Contact</a>
+            <a href="src/pages/signin.html" class="hover:text-indigo-600">Sign In</a>
+            <a href="src/pages/signup.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Sign Up</a>
+          </div>
 
-          <a href="src/pages/contact.html"
-             class="hover:text-indigo-600">
-            Contact
-          </a>
-
-          <a href="src/pages/signin.html"
-             class="hover:text-indigo-600">
-            Sign In
-          </a>
-
-          <a href="src/pages/signup.html"
-             class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
-            Sign Up
-          </a>
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            type="button"
+            onclick="toggleMenu()"
+            aria-label="Toggle navigation menu"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+            class="md:hidden text-gray-700 text-3xl focus:outline-none">
+            ☰
+          </button>
 
         </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button
-          id="menuBtn"
-          onclick="toggleMenu()"
-          class="md:hidden text-gray-700 text-3xl focus:outline-none">
-          ☰
-        </button>
-
-      </div>
-
-
-      <!-- ================= MOBILE MENU ================= -->
-      <div id="mobileMenu" class="hidden md:hidden mt-4 border-t pt-4">
-
-        <div class="flex flex-col gap-2">
-
-          <a href="index.html"
-             class="text-indigo-600 font-semibold py-2">
-            Home
-          </a>
-
-          <a href="src/pages/about.html"
-             class="hover:text-indigo-600 py-2">
-            About
-          </a>
-
-          <a href="src/pages/contact.html"
-             class="hover:text-indigo-600 py-2">
-            Contact
-          </a>
-
-          <a href="src/pages/signin.html"
-             class="hover:text-indigo-600 py-2">
-            Sign In
-          </a>
-
-          <a href="src/pages/signup.html"
-             class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-center hover:bg-indigo-700">
-            Sign Up
-          </a>
-
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 border-t pt-4">
+          <div class="flex flex-col gap-2">
+            <a href="index.html" class="text-indigo-600 font-semibold py-2" aria-current="page">Home</a>
+            <a href="src/pages/about.html" class="hover:text-indigo-600 py-2">About</a>
+            <a href="src/pages/contact.html" class="hover:text-indigo-600 py-2">Contact</a>
+            <a href="src/pages/signin.html" class="hover:text-indigo-600 py-2">Sign In</a>
+            <a href="src/pages/signup.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-center hover:bg-indigo-700">Sign Up</a>
+          </div>
         </div>
 
       </div>
+    </nav>
+  </header>
 
-    </div>
-  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="bg-indigo-600 text-white" aria-labelledby="hero-title">
+      <div class="max-w-7xl mx-auto px-6 py-24 text-center">
+
+        <span class="inline-block bg-indigo-500 px-4 py-2 rounded-full text-sm">
+          Welcome to NovaTech
+        </span>
+
+        <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mt-6">
+          Build Your Digital Future
+        </h1>
+
+        <p class="max-w-2xl mx-auto mt-6 text-lg text-indigo-100">
+          Modern digital solutions designed to help individuals and businesses
+          grow, connect and succeed.
+        </p>
+
+        <div class="mt-8 flex justify-center gap-4 flex-wrap">
+          <a href="src/pages/signup.html"
+             class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
+            Get Started
+          </a>
+
+          <a href="src/pages/about.html"
+             class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-500">
+            Learn More
+          </a>
+        </div>
+
+      </div>
+    </section>
 
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="bg-indigo-600 text-white">
+    <!-- FEATURES SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-16" aria-labelledby="features-title">
 
-    <div class="max-w-7xl mx-auto px-6 py-24 text-center">
+      <header class="text-center mb-12">
+        <p class="text-indigo-600 font-semibold">OUR FEATURES</p>
 
-      <span class="bg-indigo-500 px-4 py-2 rounded-full text-sm">
-        Welcome to NovaTech
-      </span>
+        <h2 id="features-title" class="text-3xl md:text-4xl font-bold mt-2">
+          Everything You Need
+        </h2>
 
-      <h1 class="text-4xl md:text-6xl font-bold mt-6">
-        Build Your Digital Future
-      </h1>
+        <p class="text-gray-600 mt-4">
+          Simple, powerful and modern solutions.
+        </p>
+      </header>
 
-      <p class="max-w-2xl mx-auto mt-6 text-lg text-indigo-100">
-        Modern digital solutions designed to help individuals and businesses
-        grow, connect and succeed.
-      </p>
+      <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="mt-8 flex justify-center gap-4 flex-wrap">
+        <!-- Feature Article 1 -->
+        <article class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <div class="text-4xl mb-4" aria-hidden="true">🚀</div>
+          <h3 class="text-xl font-bold mb-3">Fast Performance</h3>
+          <p class="text-gray-600">
+            Enjoy a smooth and fast digital experience on every device.
+          </p>
+        </article>
+
+        <!-- Feature Article 2 -->
+        <article class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <div class="text-4xl mb-4" aria-hidden="true">🔒</div>
+          <h3 class="text-xl font-bold mb-3">Secure Platform</h3>
+          <p class="text-gray-600">
+            Your information is handled with modern security practices.
+          </p>
+        </article>
+
+        <!-- Feature Article 3 -->
+        <article class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <div class="text-4xl mb-4" aria-hidden="true">📱</div>
+          <h3 class="text-xl font-bold mb-3">Responsive Design</h3>
+          <p class="text-gray-600">
+            Our interface works beautifully on phones, tablets and computers.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- STATISTICS SECTION -->
+    <section class="bg-gray-900 text-white py-16" aria-label="NovaTech statistics">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+        <article>
+          <h3 class="text-4xl font-bold">10K+</h3>
+          <p class="text-gray-400 mt-2">Users</p>
+        </article>
+
+        <article>
+          <h3 class="text-4xl font-bold">250+</h3>
+          <p class="text-gray-400 mt-2">Projects</p>
+        </article>
+
+        <article>
+          <h3 class="text-4xl font-bold">99%</h3>
+          <p class="text-gray-400 mt-2">Satisfaction</p>
+        </article>
+
+        <article>
+          <h3 class="text-4xl font-bold">24/7</h3>
+          <p class="text-gray-400 mt-2">Support</p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-20 text-center"
+             aria-labelledby="cta-title">
+
+      <div class="bg-indigo-50 rounded-3xl p-10">
+        <h2 id="cta-title" class="text-3xl font-bold">
+          Ready to Get Started?
+        </h2>
+
+        <p class="text-gray-600 mt-4">
+          Create your account today and explore our platform.
+        </p>
 
         <a href="src/pages/signup.html"
-           class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
-          Get Started
+           class="inline-block mt-6 bg-indigo-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-indigo-700">
+          Create Account
         </a>
-
-        <a href="src/pages/about.html"
-           class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-500">
-          Learn More
-        </a>
-
       </div>
 
-    </div>
+    </section>
 
-  </section>
-
-
-  <!-- ================= FEATURES ================= -->
-  <section class="max-w-7xl mx-auto px-6 py-16">
-
-    <div class="text-center mb-12">
-
-      <p class="text-indigo-600 font-semibold">
-        OUR FEATURES
-      </p>
-
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">
-        Everything You Need
-      </h2>
-
-      <p class="text-gray-600 mt-4">
-        Simple, powerful and modern solutions.
-      </p>
-
-    </div>
+  </main>
 
 
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Card 1 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
-
-        <div class="text-4xl mb-4">
-          🚀
-        </div>
-
-        <h3 class="text-xl font-bold mb-3">
-          Fast Performance
-        </h3>
-
-        <p class="text-gray-600">
-          Enjoy a smooth and fast digital experience on every device.
-        </p>
-
-      </div>
-
-
-      <!-- Card 2 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
-
-        <div class="text-4xl mb-4">
-          🔒
-        </div>
-
-        <h3 class="text-xl font-bold mb-3">
-          Secure Platform
-        </h3>
-
-        <p class="text-gray-600">
-          Your information is handled with modern security practices.
-        </p>
-
-      </div>
-
-
-      <!-- Card 3 -->
-      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
-
-        <div class="text-4xl mb-4">
-          📱
-        </div>
-
-        <h3 class="text-xl font-bold mb-3">
-          Responsive Design
-        </h3>
-
-        <p class="text-gray-600">
-          Our interface works beautifully on phones, tablets and computers.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= STATS ================= -->
-  <section class="bg-gray-900 text-white py-16">
-
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-
-      <div>
-        <h3 class="text-4xl font-bold">
-          10K+
-        </h3>
-
-        <p class="text-gray-400 mt-2">
-          Users
-        </p>
-      </div>
-
-
-      <div>
-        <h3 class="text-4xl font-bold">
-          250+
-        </h3>
-
-        <p class="text-gray-400 mt-2">
-          Projects
-        </p>
-      </div>
-
-
-      <div>
-        <h3 class="text-4xl font-bold">
-          99%
-        </h3>
-
-        <p class="text-gray-400 mt-2">
-          Satisfaction
-        </p>
-      </div>
-
-
-      <div>
-        <h3 class="text-4xl font-bold">
-          24/7
-        </h3>
-
-        <p class="text-gray-400 mt-2">
-          Support
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= CTA ================= -->
-  <section class="max-w-5xl mx-auto px-6 py-20 text-center">
-
-    <div class="bg-indigo-50 rounded-3xl p-10">
-
-      <h2 class="text-3xl font-bold">
-        Ready to Get Started?
-      </h2>
-
-      <p class="text-gray-600 mt-4">
-        Create your account today and explore our platform.
-      </p>
-
-      <a href="src/pages/signup.html"
-         class="inline-block mt-6 bg-indigo-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-indigo-700">
-        Create Account
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="bg-gray-900 text-white">
 
     <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
 
-      <!-- Company -->
-      <div>
-
-        <h3 class="text-2xl font-bold text-indigo-400">
+      <!-- Company Information -->
+      <section aria-labelledby="footer-company">
+        <h2 id="footer-company" class="text-2xl font-bold text-indigo-400">
           NovaTech
-        </h3>
+        </h2>
 
         <p class="text-gray-400 mt-4">
           Modern digital solutions for a better future.
         </p>
+      </section>
 
-      </div>
+      <!-- Footer Navigation -->
+      <nav aria-label="Footer navigation">
+        <h2 class="font-semibold mb-4">Quick Links</h2>
 
+        <ul class="flex flex-col gap-2 text-gray-400">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="src/pages/about.html" class="hover:text-white">About</a></li>
+          <li><a href="src/pages/contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </nav>
 
-      <!-- Quick Links -->
-      <div>
-
-        <h3 class="font-semibold mb-4">
-          Quick Links
-        </h3>
-
-        <div class="flex flex-col gap-2 text-gray-400">
-
-          <a href="index.html"
-             class="hover:text-white">
-            Home
-          </a>
-
-          <a href="src/pages/about.html"
-             class="hover:text-white">
-            About
-          </a>
-
-          <a href="src/pages/contact.html"
-             class="hover:text-white">
-            Contact
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- Contact -->
-      <div>
-
-        <h3 class="font-semibold mb-4">
-          Contact
-        </h3>
+      <!-- Contact Information -->
+      <address class="not-italic">
+        <h2 class="font-semibold mb-4">Contact</h2>
 
         <p class="text-gray-400">
           Email: info@novatech.com
@@ -364,32 +237,28 @@
         <p class="text-gray-400 mt-2">
           Phone: +92 300 1234567
         </p>
-
-      </div>
+      </address>
 
     </div>
 
-
     <div class="border-t border-gray-700 text-center py-5 text-gray-400">
-
       © 2026 NovaTech. All rights reserved.
-
     </div>
 
   </footer>
 
 
-  <!-- ================= MOBILE MENU SCRIPT ================= -->
+  <!-- MOBILE MENU SCRIPT -->
   <script>
-
     function toggleMenu() {
-
       const menu = document.getElementById("mobileMenu");
+      const button = document.getElementById("menuBtn");
 
       menu.classList.toggle("hidden");
 
+      const isExpanded = !menu.classList.contains("hidden");
+      button.setAttribute("aria-expanded", isExpanded);
     }
-
   </script>
 
 </body>

@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,289 +8,226 @@
   <title>Contact | NovaTech</title>
 
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- NAVBAR -->
-  <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <!-- HEADER AND NAVIGATION -->
+  <header>
+    <nav class="bg-white shadow-md" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      <a href="../../index.html"
-         class="text-2xl font-bold text-indigo-600">
-        NovaTech
-      </a>
-
-      <div class="hidden md:flex gap-6 items-center">
-        <a href="../../index.html" class="hover:text-indigo-600">
-          Home
+        <a href="../../index.html"
+           class="text-2xl font-bold text-indigo-600">
+          NovaTech
         </a>
 
-        <a href="about.html" class="hover:text-indigo-600">
-          About
-        </a>
+        <div class="hidden md:flex gap-6 items-center">
+          <a href="../../index.html" class="hover:text-indigo-600">Home</a>
+          <a href="about.html" class="hover:text-indigo-600">About</a>
+          <a href="contact.html" class="text-indigo-600 font-semibold">Contact</a>
+          <a href="signin.html" class="hover:text-indigo-600">Sign In</a>
+          <a href="signup.html"
+             class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+            Sign Up
+          </a>
+        </div>
 
-        <a href="contact.html" class="text-indigo-600 font-semibold">
-          Contact
-        </a>
-
-        <a href="signin.html" class="hover:text-indigo-600">
-          Sign In
-        </a>
-
-        <a href="signup.html"
-           class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
-          Sign Up
-        </a>
       </div>
+    </nav>
+  </header>
 
-    </div>
-  </nav>
+  <!-- MAIN CONTENT -->
+  <main>
 
+    <!-- HERO SECTION -->
+    <section class="bg-indigo-600 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-16 text-center">
 
-  <!-- HERO -->
-  <section class="bg-indigo-600 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+        <span class="bg-indigo-500 px-4 py-2 rounded-full text-sm">
+          Get In Touch
+        </span>
 
-      <span class="bg-indigo-500 px-4 py-2 rounded-full text-sm">
-        Get In Touch
-      </span>
+        <h1 class="text-4xl md:text-5xl font-bold mt-5">
+          Contact Us
+        </h1>
 
-      <h1 class="text-4xl md:text-5xl font-bold mt-5">
-        Contact Us
-      </h1>
-
-      <p class="max-w-2xl mx-auto mt-4 text-indigo-100">
-        Have a question or need help? Send us a message and
-        our team will get back to you.
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- CONTACT SECTION -->
-  <section class="max-w-7xl mx-auto px-6 py-16">
-
-    <div class="grid md:grid-cols-2 gap-10">
-
-      <!-- CONTACT INFORMATION -->
-      <div>
-
-        <p class="text-indigo-600 font-semibold">
-          CONTACT INFORMATION
+        <p class="max-w-2xl mx-auto mt-4 text-indigo-100">
+          Have a question or need help? Send us a message and
+          our team will get back to you.
         </p>
 
-        <h2 class="text-3xl font-bold mt-2">
-          We'd Love To Hear From You
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-16"
+             aria-labelledby="contact-heading">
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- CONTACT INFORMATION -->
+        <section aria-labelledby="contact-heading">
+
+          <p class="text-indigo-600 font-semibold">
+            CONTACT INFORMATION
+          </p>
+
+          <h2 id="contact-heading" class="text-3xl font-bold mt-2">
+            We'd Love To Hear From You
+          </h2>
+
+          <p class="text-gray-600 mt-4">
+            Feel free to contact us using the information below.
+            We are here to help you.
+          </p>
+
+          <article class="bg-white shadow-md rounded-xl p-6 mt-8">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl" aria-hidden="true">📧</div>
+              <div>
+                <h3 class="font-bold">Email</h3>
+                <p class="text-gray-600">info@novatech.com</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white shadow-md rounded-xl p-6 mt-4">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl" aria-hidden="true">📞</div>
+              <div>
+                <h3 class="font-bold">Phone</h3>
+                <p class="text-gray-600">+92 300 1234567</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white shadow-md rounded-xl p-6 mt-4">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl" aria-hidden="true">📍</div>
+              <div>
+                <h3 class="font-bold">Location</h3>
+                <p class="text-gray-600">Lahore, Pakistan</p>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section aria-labelledby="form-heading"
+                 class="bg-white shadow-lg rounded-2xl p-8">
+
+          <h2 id="form-heading" class="text-2xl font-bold mb-6">
+            Send Us A Message
+          </h2>
+
+          <form action="https://formspree.io/f/xrpbnnjd"
+                method="POST"
+                class="space-y-5">
+
+            <div>
+              <label for="name" class="block font-medium mb-2">
+                Your Name
+              </label>
+              <input id="name" type="text" name="name"
+                     placeholder="Enter your name" required
+                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+              <label for="email" class="block font-medium mb-2">
+                Email Address
+              </label>
+              <input id="email" type="email" name="email"
+                     placeholder="Enter your email" required
+                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+              <label for="subject" class="block font-medium mb-2">
+                Subject
+              </label>
+              <input id="subject" type="text" name="subject"
+                     placeholder="Enter subject" required
+                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+              <label for="message" class="block font-medium mb-2">
+                Message
+              </label>
+              <textarea id="message" name="message" rows="5"
+                        placeholder="Write your message..." required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+              Send Message
+            </button>
+
+          </form>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="max-w-5xl mx-auto px-6 pb-16"
+             aria-labelledby="information-heading">
+
+      <div class="bg-indigo-50 rounded-3xl p-10 text-center">
+
+        <h2 id="information-heading" class="text-3xl font-bold">
+          Need More Information?
         </h2>
 
-        <p class="text-gray-600 mt-4">
-          Feel free to contact us using the information below.
-          We are here to help you.
+        <p class="text-gray-600 mt-3">
+          Our team is always ready to help you.
         </p>
 
-
-        <!-- EMAIL CARD -->
-        <div class="bg-white shadow-md rounded-xl p-6 mt-8">
-          <div class="flex items-center gap-4">
-            <div class="text-3xl">📧</div>
-
-            <div>
-              <h3 class="font-bold">Email</h3>
-              <p class="text-gray-600">
-                info@novatech.com
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- PHONE CARD -->
-        <div class="bg-white shadow-md rounded-xl p-6 mt-4">
-          <div class="flex items-center gap-4">
-            <div class="text-3xl">📞</div>
-
-            <div>
-              <h3 class="font-bold">Phone</h3>
-              <p class="text-gray-600">
-                +92 300 1234567
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- LOCATION CARD -->
-        <div class="bg-white shadow-md rounded-xl p-6 mt-4">
-          <div class="flex items-center gap-4">
-            <div class="text-3xl">📍</div>
-
-            <div>
-              <h3 class="font-bold">Location</h3>
-              <p class="text-gray-600">
-                Lahore, Pakistan
-              </p>
-            </div>
-          </div>
-        </div>
+        <a href="mailto:info@novatech.com"
+           class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold">
+          Email Us
+        </a>
 
       </div>
+    </section>
 
-
-      <!-- CONTACT FORM -->
-      <div class="bg-white shadow-lg rounded-2xl p-8">
-
-        <h2 class="text-2xl font-bold mb-6">
-          Send Us A Message
-        </h2>
-
-        <!-- FORM -->
-        <form action="https://formspree.io/f/xrpbnnjd"
-              method="POST"
-              class="space-y-5">
-
-          <!-- NAME -->
-          <div>
-            <label class="block font-medium mb-2">
-              Your Name
-            </label>
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-
-
-          <!-- EMAIL -->
-          <div>
-            <label class="block font-medium mb-2">
-              Email Address
-            </label>
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-
-
-          <!-- SUBJECT -->
-          <div>
-            <label class="block font-medium mb-2">
-              Subject
-            </label>
-
-            <input
-              type="text"
-              name="subject"
-              placeholder="Enter subject"
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-
-
-          <!-- MESSAGE -->
-          <div>
-            <label class="block font-medium mb-2">
-              Message
-            </label>
-
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Write your message..."
-              required
-              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-          </div>
-
-
-          <!-- BUTTON -->
-          <button
-            type="submit"
-            class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
-            Send Message
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-  <section class="max-w-5xl mx-auto px-6 pb-16">
-
-    <div class="bg-indigo-50 rounded-3xl p-10 text-center">
-
-      <h2 class="text-3xl font-bold">
-        Need More Information?
-      </h2>
-
-      <p class="text-gray-600 mt-3">
-        Our team is always ready to help you.
-      </p>
-
-      <a href="mailto:info@novatech.com"
-         class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold">
-        Email Us
-      </a>
-
-    </div>
-
-  </section>
-
+  </main>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white">
 
     <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
 
-      <div>
-        <h3 class="text-2xl font-bold text-indigo-400">
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-400">
           NovaTech
-        </h3>
-
+        </h2>
         <p class="text-gray-400 mt-3">
           Modern digital solutions for a better future.
         </p>
-      </div>
+      </section>
 
-      <div>
-        <h3 class="font-semibold mb-3">
-          Quick Links
-        </h3>
-
+      <nav aria-label="Footer navigation">
+        <h2 class="font-semibold mb-3">Quick Links</h2>
         <div class="flex flex-col gap-2 text-gray-400">
           <a href="../../index.html">Home</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html">Sign Up</a>
         </div>
-      </div>
+      </nav>
 
-      <div>
-        <h3 class="font-semibold mb-3">
-          Contact
-        </h3>
-
-        <p class="text-gray-400">
-          info@novatech.com
-        </p>
-
-        <p class="text-gray-400 mt-2">
-          +92 300 1234567
-        </p>
-      </div>
+      <address class="not-italic">
+        <h2 class="font-semibold mb-3">Contact</h2>
+        <p class="text-gray-400">info@novatech.com</p>
+        <p class="text-gray-400 mt-2">+92 300 1234567</p>
+      </address>
 
     </div>
 
@@ -301,3 +239,4 @@
 
 </body>
 </html>
+```
