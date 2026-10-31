@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,6 +174,38 @@
     </section>
 
 
+    <!-- TASK 1: CRUD & LOCAL STORAGE SECTION -->
+    <section class="max-w-4xl mx-auto p-6 bg-white shadow rounded my-12" aria-labelledby="crud-title">
+      <h2 id="crud-title" class="text-2xl font-bold mb-4">Manage Records (CRUD & Local Storage)</h2>
+      
+      <!-- Add/Update Form -->
+      <form id="recordForm" class="flex flex-col md:flex-row gap-4 mb-6">
+          <input type="text" id="recordName" placeholder="Enter Title/Name" required class="border p-2 rounded flex-1">
+          <input type="text" id="recordCategory" placeholder="Enter Category" required class="border p-2 rounded flex-1">
+          <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Save Record</button>
+      </form>
+
+      <!-- Search Input -->
+      <div class="mb-6">
+          <input type="text" id="searchInput" placeholder="Search records by name or category..." class="border p-2 rounded w-full">
+      </div>
+
+      <!-- Records Display Area -->
+      <div id="recordsContainer" class="space-y-3">
+          <!-- JavaScript yahan records dynamically dikhayega -->
+      </div>
+    </section>
+
+
+    <!-- TASK 2: API DATA INTEGRATION SECTION -->
+    <section class="max-w-4xl mx-auto p-6 bg-white shadow rounded my-12" aria-labelledby="api-title">
+      <h2 id="api-title" class="text-2xl font-bold mb-4">API Data Integration (Axios GET)</h2>
+      <div id="apiDataContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Axios se aane wala data yahan show hoga -->
+      </div>
+    </section>
+
+
     <!-- CALL TO ACTION SECTION -->
     <section class="max-w-5xl mx-auto px-6 py-20 text-center"
              aria-labelledby="cta-title">
@@ -248,7 +279,10 @@
   </footer>
 
 
-  <!-- MOBILE MENU SCRIPT -->
+  <!-- SCRIPTS (Axios, Mobile Menu & Custom JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  
   <script>
     function toggleMenu() {
       const menu = document.getElementById("mobileMenu");
